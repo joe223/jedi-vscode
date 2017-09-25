@@ -1,0 +1,44 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "jedi",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.jedi",
+				"match": "\\b(else|end|external|for|if|import|in|let|not|unless|unsafe|where|×|÷|＋|－)\\b"
+			},{
+				"name": "keyword.html.jedi",
+				"match": "\\b(a|abbr|address|area|article|aside|audio|b|base|bdi|bdo|blockquote|body|br|button|canvas|caption|cite|code|col|colgroup|data|datalist|dd|del|details|dfn|dialog|div|dl|dt|em|embed|fieldset|figcaption|figure|footer|form|h1|h2|h3|h4|h5|h6|head|header|hgroup|hr|html|i|iframe|img|input|ins|kbd|keygen|label|legend|li|link|main|map|mark|menu|menuitem|meta|meter|nav|noscript|object|ol|optgroup|option|output|p|param|pre|progress|q|rp|rt|ruby|s|samp|script|section|select|small|source|span|strong|style|sub|summary|sup|table|tbody|td|textarea|tfoot|th|thead|time|title|tr|track|u|ul|var|video|wbr)\\b"
+			},{
+				"name": "keyword.content.jedi",
+				"match": "\\b(console|log|echo|print|this)\\b"
+			},{
+				"name": "keyword.symbol.jedi",
+				"match": ":\\w+ +|=|==|===|@@|<\\?.*?\\?>"
+			},{
+				"name": "keyword.attribute.jedi",
+				"match": "@abbr|@accept|@accept-charset|@accesskey|@action|@allowfullscreen|@alt|@async|@autocomplete|@autofocus|@autoplay|@challenge|@charset|@checked|@cite|@class|@cols|@colspan|@command|@content|@contenteditable|@contextmenu|@controls|@coords|@crossorigin|@data|@datetime|@default|@defer|@dir|@dirname|@disabled|@download|@draggable|@dropzone|@enctype|@for|@form|@formaction|@formenctype|@formmethod|@formnovalidate|@formtarget|@headers|@height|@hidden|@high|@href|@hreflang|@http-equiv|@icon|@id|@inert|@inputmode|@ismap|@itemid|@itemprop|@itemref|@itemscope|@itemtype|@keytype|@kind|@label|@lang|@list|@loop|@low|@manifest|@max|@maxlength|@media|@mediagroup|@menu|@method|@min|@multiple|@muted|@name|@novalidate|@onabort|@onafterprint|@onbeforeprint|@onbeforeunload|@onblur|@oncancel|@oncanplay|@oncanplaythrough|@onchange|@onclick|@onclose|@oncontextmenu|@oncuechange|@ondblclick|@ondrag|@ondragend|@ondragenter|@ondragexit|@ondragleave|@ondragover|@ondragstart|@ondrop|@ondurationchange|@onemptied|@onended|@onerror|@onfocus|@onhashchange|@oninput|@oninvalid|@onkeydown|@onkeypress|@onkeyup|@onload|@onloadeddata|@onloadedmetadata|@onloadstart|@onmessage|@onmousedown|@onmouseenter|@onmouseleave|@onmousemove|@onmouseout|@onmouseover|@onmouseup|@onmousewheel|@onoffline|@ononline|@onpagehide|@onpageshow|@onpause|@onplay|@onplaying|@onpopstate|@onprogress|@onratechange|@onreset|@onresize|@onscroll|@onseeked|@onseeking|@onselect|@onshow|@onsort|@onstalled|@onstorage|@onsubmit|@onsuspend|@ontimeupdate|@onunload|@onvolumechange|@onwaiting|@open|@optimum|@pattern|@ping|@placeholder|@poster|@preload|@radiogroup|@readonly|@rel|@required|@reversed|@rows|@rowspan|@sandbox|@scope|@scoped|@seamless|@selected|@shape|@size|@sizes|@span|@spellcheck|@src|@srcdoc|@srclang|@srcset|@start|@step|@style|@tabindex|@target|@title|@translate|@type|@typemustmatch|@usemap|@value|@width|@wrap"
+			}]
+		},
+		"strings": {
+			"name": "string.quoted.jedi",
+			"begin": "'|\"",
+			"end": "'|$|\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.jedi",
+					"match": "\\\\."
+				}
+			]
+		}
+	},
+	"scopeName": "source.jedi"
+}

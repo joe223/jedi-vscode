@@ -1,0 +1,26 @@
+{
+    "name": "jedi",
+    "displayName": "jedi",
+    "description": "jedi syntax highlight",
+    "version": "0.0.1",
+    "publisher": "jedi",
+    "engines": {
+        "vscode": "^1.16.0"
+    },
+    "categories": [
+        "Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "jedi",
+            "aliases": ["jedi", "jedi"],
+            "extensions": [".jedi"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "jedi",
+            "scopeName": "source.jedi",
+            "path": "./syntaxes/jedi.tmLanguage.json"
+        }]
+    }
+}
